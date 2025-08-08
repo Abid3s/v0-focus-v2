@@ -1,0 +1,227 @@
+// components/navigation.tsx
+import React from 'react';
+import Link from 'next/link';
+
+const Navigation = () => {
+  return (
+    <nav>
+      {/* Top navigation */}
+      <div className="flex justify-between items-center">
+        {/* Logo and other navigation items */}
+        <div>
+          {/* Get Quote link */}
+          <Link href="/contact">
+            <a className="text-blue-500">Get Quote</a>
+          </Link>
+        </div>
+      </div>
+
+      {/* Dropdown menu */}
+      <div className="dropdown">
+        {/* Dropdown items */}
+        <div className="dropdown-bottom">
+          {/* CTA button */}
+          <Link href="/contact">
+            <button className="cta-button">Get Quote</button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div className="mobile-menu">
+        {/* Mobile menu items */}
+        <div className="mobile-menu-footer">
+          {/* Footer button */}
+          <Link href="/contact">
+            <button className="footer-button">Get Quote</button>
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
+
+// components/fleet-insurance-cta.tsx
+import React from 'react';
+import Button from 'components/Button';
+import Phone from 'components/Phone';
+import ArrowRight from 'components/ArrowRight';
+import Mail from 'components/Mail';
+import Link from 'next/link';
+
+const FleetInsuranceCTA = () => {
+  return (
+    <div>
+      {/* Call for Quote button */}
+      <Link href="/contact">
+        <Button className="bg-[#F61F41] hover:bg-white hover:text-[#001d3d] text-white font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center group">
+          <Phone className="mr-2 w-5 h-5" />
+          Enquire now
+          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </Button>
+      </Link>
+
+      {/* Email Enquiry button */}
+      <Link href="/contact">
+        <Button className="bg-transparent border-2 border-white hover:bg-white hover:text-[#001d3d] text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 flex items-center justify-center">
+          <Mail className="mr-2 w-5 h-5" />
+          Contact us
+        </Button>
+      </Link>
+
+      {/* Contact info */}
+      <div>
+        <span>01733 263311</span>
+        <span>info@focusinsurance.co.uk</span>
+      </div>
+    </div>
+  );
+};
+
+export default FleetInsuranceCTA;
+
+// components/commercial-vehicle-cta.tsx
+import React from 'react';
+import Button from 'components/Button';
+import Phone from 'components/Phone';
+import ArrowRight from 'components/ArrowRight';
+import Mail from 'components/Mail';
+import Link from 'next/link';
+
+const CommercialVehicleCTA = () => {
+  return (
+    <div>
+      {/* Call for Quote button */}
+      <Link href="/contact">
+        <Button className="bg-[#F61F41] hover:bg-white hover:text-[#001d3d] text-white font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center group">
+          <Phone className="mr-2 w-5 h-5" />
+          Enquire now
+          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </Button>
+      </Link>
+
+      {/* Email Enquiry button */}
+      <Link href="/contact">
+        <Button className="bg-transparent border-2 border-white hover:bg-white hover:text-[#001d3d] text-white font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 flex items-center justify-center">
+          <Mail className="mr-2 w-5 h-5" />
+          Contact us
+        </Button>
+      </Link>
+
+      {/* Contact info */}
+      <div>
+        <span>01733 263311</span>
+        <span>info@focusinsurance.co.uk</span>
+      </div>
+    </div>
+  );
+};
+
+export default CommercialVehicleCTA;
+
+// components/commercial-property-cta.tsx
+import React from 'react';
+
+const CommercialPropertyCTA = () => {
+  return (
+    <div>
+      {/* Contact information card */}
+      <div>
+        <span>01733 263311</span>
+        <span>
+          Focus Insurance Services<br /> 29 Ivatt Way<br /> Peterborough PE3 7PH
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default CommercialPropertyCTA;
+
+// components/travel-insurance-cta.tsx
+import React from 'react';
+import Button from 'components/Button';
+import Link from 'next/link';
+
+const TravelInsuranceCTA = () => {
+  return (
+    <div>
+      {/* External Get Quote & Buy Online Now Link/Button */}
+      <Link href="https://external-link.com">
+        <button className="external-button">Get Quote & Buy Online Now</button>
+      </Link>
+
+      {/* Secondary CTA button */}
+      <Link href="/contact">
+        <Button variant="outline" className="w-full border-[#F61F41] text-[#F61F41] hover:bg-[#F61F41] hover:text-white font-bold py-4 text-lg rounded-lg shadow-sm transition-all duration-300 mt-3 bg-transparent">
+          Prefer to speak to us? Contact our team
+        </Button>
+      </Link>
+
+      {/* Regulatory footer text */}
+      <div className="regulatory-footer">
+        <p>This is general information and not advice.</p>
+      </div>
+    </div>
+  );
+};
+
+export default TravelInsuranceCTA;
+
+// components/shop-cta.tsx
+import React from 'react';
+import Button from 'components/Button';
+
+const ShopCTA = () => {
+  return (
+    <div>
+      {/* Telephone and email */}
+      <span>01733 263311</span>
+      <span>info@focusinsurance.co.uk</span>
+
+      {/* Form and other CTA links */}
+      <div>
+        {/* Form */}
+        <form>
+          {/* Form fields */}
+        </form>
+
+        {/* Additional CTA links */}
+        <Link href="/contact">
+          <Button className="additional-cta">Additional CTA</Button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default ShopCTA;
+
+// components/takeaways-restaurant-cta.tsx
+import React from 'react';
+import Button from 'components/Button';
+import Link from 'next/link';
+
+const TakeawaysRestaurantCTA = () => {
+  return (
+    <div>
+      {/* Telephone and email */}
+      <span>01733 263311</span>
+      <span>info@focusinsurance.co.uk</span>
+
+      {/* CTA links */}
+      <div>
+        <Link href="/contact">
+          <Button className="cta-button">Enquire now</Button>
+        </Link>
+        <Link href="/contact">
+          <Button className="cta-button">Contact us</Button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default TakeawaysRestaurantCTA;
